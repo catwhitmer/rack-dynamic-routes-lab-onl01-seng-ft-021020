@@ -10,7 +10,7 @@ class Application
       @@items.each do |item|
         resp.write.item.price
       end
-    else
+    elsif
       resp.write "Item Not Found"
       resp.status = 404
     end
