@@ -6,8 +6,9 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
  
-    if req.path=="/items/"
-      resp.write "The price of the item is"
+    if req.path.match(/items/)
+      @@items.each do |item|
+        resp.write.price
     else
       resp.write "Route not found"
       resp.status = 404
