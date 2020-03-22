@@ -8,7 +8,7 @@ class Application
  
     if req.path.match(/items/)
       @@items.each do |item|
-        resp.write.price
+        resp.write.item.price
       end
     else
       resp.write "Item Not Found"
